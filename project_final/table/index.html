@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-GYFDvMml7xbiPQvLP5UA6G/2AvC4JpfdnjQw6sz85o7osxfrtK/7Hcd0MHAnrYR3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <button class="open-btn" id="openBtn"><i class="fas fa-bars"></i></button>
+        <div><img src="../assets/header.svg" alt="SVG Image" class="header-image"></div>
+        <div class="nav-right">
+            <i class="fa-solid fa-bell not-btn"></i>
+            <img class="profile-pic-nav" src="../assets/profile.png" alt="Profile Picture">
+            <div class="dropdown">
+                <p class="prof-name">John Doe <i class="fa-solid fa-chevron-down down"></i></p>
+                <div class="dropdown-content" id="dropdownContent">
+                    <p>johndoe@example.com</p><br>
+                    <p>Surveyor</p><br>
+                    <p>Logout<i class="fa-solid fa-power-off p-off"></i></p><br>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="drawer" id="drawer">
+        <button class="close-btn" id="closeBtn">&times;</button>
+        <div><img src="../assets/drawer.svg" alt="SVG Image" class="drawer-image"></div>
+        <div class="profile">
+            <img class="profile-pic" src="../assets/profile.png" alt="Profile Picture">
+            <div class="profile-info">
+                <p class="name">John Doe</p>
+                <p class="email">johndoe@example.com</p>
+                <p class="role">Survey Partner</p>
+            </div>
+        </div>
+        <div class="options">
+            <div class="option">
+                <i class="fa-solid fa-house-chimney"></i>
+                <span>Home</span>
+            </div>
+            <div class="option">
+                <i class="fas fa-table-cells-large"></i>
+                <span>Dashboard</span>
+            </div>
+            <div class="option">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </div>
+            <div class="option">
+                <i class="fa-solid fa-list-check"></i>
+                <span>Tasks</span>
+            </div>
+            <div class="option">
+                <i class="fa-solid fa-tree"></i>
+                <span>Added Tree</span>
+            </div>
+            <div class="option">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span>History</span>
+            </div>
+            <div class="option">
+                <i class="fa-brands fa-joomla"></i>
+                <span>Track Carbon Footprint</span>
+            </div>
+            <div class="option">
+                <i class="fa-solid fa-cloud-arrow-down"></i>
+                <span>Downloads</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <!-- Main content goes here -->
+    </div>
+
+    <div class="tree-details">
+        <h1>Tree Details</h1>
+        <!-- Checkboxes for column selection -->
+        <div id="checkboxContainer">
+            <!-- Checkboxes will be added dynamically here -->
+        </div>
+        <div class="dropdown ">
+            <button class="dropbtn">Filter</button>
+            <div class="dropdown-content filter" id="columnSelector">
+                <!-- Checkboxes for column selection will be added dynamically here -->
+            </div>
+        </div>
+
+        <div class="controls">
+            <label for="listSize">Rows per page:</label>
+            <select id="listSize">
+                <option value="5">5</option>
+                <option value="10" selected>10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+            </select>
+
+            <label for="sortColumn">Sort by:</label>
+            <select id="sortColumn">
+                <option value="id">Tree ID</option>
+                <option value="name">Tree Name</option>
+                <option value="date">Date</option>
+                <option value="surveyor">Surveyor Name</option>
+            </select>
+            <button id="sortButton">Sort</button>
+        </div>
+
+        <table id="treeTable">
+            <thead>
+                <tr>
+                    <th>Tree ID</th>
+                    <th>QR ID</th>
+                    <th>Tree Name</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Place</th>
+                    <th>Surveyor Name</th>
+                    <th>Girth</th>
+                    <th>Height</th>
+                    <th>Age</th>
+                    <th>Tree Canopy</th>
+                    <th>Ownership</th>
+                    <th>Condition</th>
+                    <th>Flower Property</th>
+                    <th>Flowering Season</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be dynamically populated by JavaScript -->
+            </tbody>
+        </table>
+        <div id="pagination"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+
+body {
+    /* Set the gradient background */
+     /* Change colors as needed */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Adjusted to start flex items from the top */
+    align-items: center;
+    font-family: 'Luckiest Guy', Arial, sans-serif; /* Luckiest Guy font */
+    position: relative; /* Added relative positioning for the body */
+    overflow: hidden; /* Hide overflow content */
+    height: 100vh; /* Ensure the body takes up the full viewport height */
+    padding: 0px;
+}
+
+.header {
+    width: 98%;
+    padding: 20px;
+     /* Semi-transparent background */
+    text-align: center;
+    /* Subtle shadow for the header */
+}
+
+.header h1 {
+    margin-top: -10px;
+    font-size: 64px; /* Adjust font size as needed */
+}
+
+.green-text {
+    color: #25532E;
+    letter-spacing: 4px;
+     /* Green color */
+}
+
+.blue-text {
+    color: #004859; /* Blue color */
+    letter-spacing: 4px;
+}
+.green-marker {
+    color: #25532E; 
+    letter-spacing: 4px;
+    /* Green color for marker icon */
+/* Green color for marker icon */
+}
+
+.image-container {
+    position: absolute; /* Position absolute to fix at the bottom */
+    bottom: 0;
+    width: 100%;
+    height: 250px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+#bottomImage.less-visible {
+    width: 100%;
+    height: 100%;
+    opacity: 0.08; /* Adjust the opacity value to make the image less visible */
+    object-fit: cover; /* Ensure the image covers the container */
+}
+.header h1 {
+    margin: 0;
+    font-size: 64px; /* Adjust font size as needed */
+    position: relative; /* Added relative positioning for the header text */
+}
+
+/* Line beneath header text */
+.header h1::after {
+    content: '';
+    position: absolute;
+    left: 20px;
+    bottom: -30px; /* Adjust the distance between the text and the line */
+    width: 100%;
+    height: 1px;
+    background-color: #25532E; /* Green color */
+}
+/* Add styling for the buttons container */
+.buttons-container {
+    position: absolute;
+    top: 140px; /* Adjust the distance from the top */
+    right: 30px; /* Adjust the distance from the right */
+    margin-top: 20px;
+}
+
+/* Add styling for the login and signup buttons */
+
+
+/* Add hover effect for the buttons */
+
+
+/* Adjust position of header */
+.header {
+    position: relative;
+}
+/* Positioning for tree icon */
+
+.t-icon{
+    padding: 5px;
+}
+
+.svg-container {
+    width: 64px; /* Adjust width as needed */
+    height: 64px; /* Adjust height as needed */
+    margin: 0 auto; /* Center horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5px; /* Adjust vertical alignment */
+    
+}
+/* Style for the line below tree icon */
+
+/* Style for the text container */
+.text-container {
+    text-align: left;
+    padding-left: 30px;
+    margin-top: -10px;
+}
+
+/* Style for the text with Candal font */
+.candal-text {
+    font-family: 'Candal', sans-serif;
+    font-size: 50px; /* Adjust font size as needed */
+    color: #004859; /* Green color */
+    margin-top: -20px; /* Adjust distance from line */
+    margin-left: 20px;
+}
+
+.cabin{
+    font-family: 'Cabin',sans-serif;
+    font-size: 20px;
+    color: #114025;
+    font-weight: medium;
+    opacity: 51%;
+    margin-top: -20px;
+    margin-left: 20px;
+    width: 70%;
+}
+
+.download-button-app{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    
+    padding: 10px 20px;
+    margin-left: 10px; /* Adjust spacing between buttons */
+    border-radius: 5px;
+    cursor: pointer;
+    width: 140px; /* Adjust button width as needed */
+    margin: 10px; /* Adjust margin between buttons */
+    text-align: left; /* Center text horizontally */
+    white-space: nowrap;
+}
+
+
+
+.download-button-google{
+    background-color: #ffffff; /* Green color */
+    color: black;
+    border: 1px solid black;
+    
+    padding: 10px 20px;
+    margin-left: 25px; /* Adjust spacing between buttons */
+    border-radius: 5px;
+    cursor: pointer;
+    width: 140px; /* Adjust button width as needed */
+    margin: 10px; /* Adjust margin between buttons */
+    text-align: left; /* Center text horizontally */
+    white-space: nowrap;
+}
+
+.download-buttons {
+    position: absolute;
+    bottom: -65px; /* Adjust the distance from the bottom */
+    left: 60px; /* Adjust the distance from the left */
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; 
+    
+}
+.first-line-a{
+    font-family: 'Cabin',sans-serif;
+    font-size: 10px;
+    
+    font: medium;
+}
+.second-line-a{
+    font-family: 'Cabin',sans-serif;
+    font-size: 20px;
+    
+    font: medium;
+}
+.first-line-g{
+    font-family: 'Cabin',sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    font: medium;
+
+}
+.second-line-g{
+    font-family: 'Cabin',sans-serif;
+    font-size: 20px;
+    font: medium;
+    font-weight: medium;
+
+}
+.a-icon{
+    color: #ffffff;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Register</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="text">GeoTree</div>
+    <div class="square-box">
+      <div class="form-container">
+        <form id="registerForm" action="#" method="post">
+          <div class="input-wrapper">
+            <input type="text" id="nameInput" class="input-field" placeholder=" " required>
+            <label for="nameInput" class="input-label">Name</label>
+          </div>
+          <div class="input-wrapper">
+            <input type="email" id="emailInput" class="input-field" placeholder=" " required>
+            <label for="emailInput" class="input-label">Enter Email Id</label>
+          </div>
+          <div class="input-wrapper">
+            <select id="role" class="input-field select-field" required>
+              <option value="user">User</option>
+              <option value="Surveyor">Surveyor</option>
+            </select>
+            <label for="role" class="input-label">Select Role</label>
+          </div>
+          <div class="input-wrapper password-wrapper">
+            <input type="password" id="password" class="input-field" placeholder=" " required>
+            <label for="password" class="input-label">Enter Password*</label>
+            <div class="password-toggle-icon" id="togglePassword">
+                <i class="fas fa-eye" id="passwordToggleIcon"></i>
+              </div>
+          </div>
+          <div class="input-wrapper password-wrapper">
+            <input type="password" id="repassword" class="input-field" placeholder=" " required>
+            <label for="repassword" class="input-label">Re-enter Password*</label>
+            <div class="repassword-toggle-icon" id="toggleRepassword">
+                <i class="fas fa-eye" id="repasswordToggleIcon"></i>
+            </div>
+          </div>
+          <div class="button-container">
+            
+            <button type="register">
+              <a href="../dash/t1.html">
+                Register
+              </a>
+            </button>
+          </div>
+          <div class="signup-text">
+            ---------- Or Signup using ----------
+          </div>
+          <div class="social-icons">
+            <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i>Facebook</a>
+            <a href="#" class="social-icon gmail"><i class="fas fa-envelope"></i>Gmail</a>
+          </div>
+          <div class="account-text">
+            Already have an account?
+          </div>
+          <div class="login-link">
+            <a href="#">Login now</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  
+</body>
+</html>

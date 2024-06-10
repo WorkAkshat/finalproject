@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+  background-image: url('../assets/bg1.avif');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Set the height to 100% of the viewport height */
+}
+
+
+.overlay {
+  position: fixed; /* Change position to fixed */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Set width to 100% */
+  height: 100%; /* Set height to 100% */
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1; /* Ensure it's above other elements */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.text {
+  font-family: 'Luckiest Guy', sans-serif;
+  color: #004859;
+  font-size: 100px;
+  z-index: 1;
+  margin-top: -20px;
+}
+
+.square-box {
+  z-index: 1;
+  width: 400px; /* Adjusted width */
+  height: 480px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Adjust padding to center the form */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top:1px;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 380px; /* Adjusted max-width */
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.input-field {
+    width: calc(100% - 22px); /* Adjusted width */
+    padding: 10px;
+    border: 1px solid #004859;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #004859; /* Change the text color to blue */
+  }
+  
+
+.input-field:hover {
+  border-color: #004859; /* Change border color on hover */
+}
+
+.input-field:focus {
+  border-color: #004859;
+  outline: none; /* Keep border color on focus */
+}
+
+.input-label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  padding: 0 5px;
+  transition: transform 0.2s, font-size 0.2s, top 0.2s;
+  z-index: 1;
+}
+
+.input-field:focus + .input-label,
+.input-field:not(:placeholder-shown) + .input-label,
+.select-field:focus + .input-label,
+.select-field:not(:placeholder-shown) + .input-label {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  transform: translateY(0);
+  color: #004859;
+}
+
+select.input-field {
+  background: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 width%3D%2210%22 height%3D%225%22 viewBox%3D%220 0 10 5%22%3E%3Cpath fill%3D%22%234859%22 d%3D%22M0 0l5 5 5-5z%22/%3E%3C/svg%3E') no-repeat right 10px center;
+  background-color: white;
+  background-size: 10px 5px;
+  padding-right: 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.square-box button[type="register"] {
+  background-color: #004859;
+  color: #ffffff;
+  padding: 10px 20px;
+  width: 296px;
+  height: 46px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 28px;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.square-box button[type="register"]:hover {
+  background-color: #1b6576;
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: medium; /* Adjusted font-weight property */
+  font-size: 28px;
+}
+
+button[type="register"] {
+  background-color: #004859;
+  color: #ffffff;
+  width: 296px;
+  height: 46px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #004859; /* Change color to blue */
+}
+
+
+
+.select-field option {
+    color: #004859; /* Change color to blue */
+  }
+  
+  .select-field {
+    color: #004859; /* Change color of selected option to blue */
+    width: calc(100% - 1px); /* Adjusted width */
+    padding: 10px;
+    border: 1px solid #004859;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: transparent;
+  }
+  @media only screen and (max-width: 600px) {
+    .square-box {
+      width: 90%; /* Adjusted width */
+    }
+  
+    .input-field {
+      width: calc(100% - 22px); /* Adjusted width */
+    }
+  
+    .select-field {
+      width: calc(100% - 1px); /* Adjusted width */
+    }
+  
+    .square-box button[type="register"] {
+      width: 90%; /* Adjusted width */
+    }
+  }
+  .password-toggle-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #004859;
+  }
+
+
+  .password-wrapper {
+    position: relative;
+  }
+  .repassword-toggle-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor:pointer;
+    color: #004859;
+  }
+  .signup-text {
+    text-align: center;
+    margin-top: 15px;
+    color: #004859; /* Adjust color as needed */
+    font-size: 14px; /* Adjust font size as needed */
+  }
+  .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      font-size: 24px;
+      margin: 10px 30px;
+      text-decoration: none;
+      margin-top: -5px;
+    }
+
+    .fa-facebook-f {
+        color: #3b5998;
+        margin-right: 8px; /* Space between icon and label */
+      }
+  
+      .fa-envelope {
+        color: #db4437;
+        margin-right: 8px; /* Space between icon and label */
+      }
+      .social-icon.facebook {
+        font-size: 20px;
+        color: #3b5998; /* Facebook icon and label color */
+      }
+  
+      .social-icon.gmail {
+        font-size: 20px;
+        color: #db4437; /* Gmail icon and label color */
+      }
+      .account-text {
+        text-align: center;
+        margin-top: 10px;
+        color: #004859; /* Adjust color as needed */
+        font-size: 18px; /* Adjust font size as needed */
+        margin-top: -1px;
+      }
+      .login-link {
+        text-align: center;
+        margin-top: 5px;
+        color: #004859; /* Adjust color as needed */
+        font-size: 20px; /* Adjust font size as needed */
+        font-family: "Roboto",sans-serif;
+        font-weight: bolder;
+      }
+  
+      .login-link a {
+        color: #004859;
+        text-decoration: none;
+      }
+  
+      .login-link a:hover {
+        text-decoration: underline;
+      }

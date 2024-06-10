@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background: linear-gradient(to bottom, #ffffff, #ffffff, #004859);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.drawer {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #004859;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;
+    transition: opacity 2s; /*check it*/
+}
+
+
+.drawer h2, .drawer p {
+    padding: 8px 32px;
+    text-align: center;
+}
+
+.drawer .close-btn {
+    position: absolute;
+    top:1px;
+    right: 5px;
+    font-size: 36px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.drawer-image {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    margin: auto;
+    margin-top: -50px;
+    display: block;
+}
+
+.main-content {
+    padding: 16px;
+    align-items: flex-start; /* Align items to the start */
+}
+
+.open-btn {
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #004859;
+    padding: 10px 20px;
+    text-align: center;
+    transition: 0.3s;
+    position: fixed;
+    z-index: 2; /* Ensure the button is above the drawer */
+    top: 1px; /* Adjust the vertical position */
+    left: 2px; /* Adjust the horizontal position */
+}
+
+.open-btn:hover {
+    color: #444;
+}
+
+.drawer-opened .open-btn {
+    display: none; /* Hide the menu icon when drawer is opened */
+}
+
+.drawer .profile {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.profile-pic {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.profile-info {
+    color: white;
+}
+
+.profile-info p {
+    margin: 1px 0;
+    text-align: left;
+    display: inline;
+    margin-left: -20px;
+}
+
+.profile-info .name {
+    font-weight: bold;
+    font-size: 14px;
+
+}
+
+.profile-info .email,
+.profile-info .role {
+    font-size: 10px;
+    margin-top: -30px;
+    
+}
+.options {
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    font-size: 18px;
+    color: white;
+}
+
+.option i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.option i {
+    margin-right: 15px; /* Adjust as needed */
+}

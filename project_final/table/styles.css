@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Candal&family=Luckiest+Guy&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background: linear-gradient(to bottom, #ffffff, #ffffff, #004859);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.drawer {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #004859;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;
+    transition: opacity 2s; /*check it*/
+}
+
+.drawer h2,
+.drawer p {
+    padding: 8px 32px;
+    text-align: center;
+}
+
+.drawer .close-btn {
+    position: absolute;
+    top: 1px;
+    right: 5px;
+    font-size: 36px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.drawer-image {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    margin: auto;
+    margin-top: -50px;
+    display: block;
+}
+
+/* .main-content {
+    padding: 16px;
+    align-items: flex-start;
+ position: relative; 
+} */
+
+.open-btn {
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #004859;
+    padding: 10px 20px;
+    text-align: center;
+    transition: 0.3s;
+    position: fixed;
+    z-index: 2; /* Ensure the button is above the drawer */
+    top: 1px; /* Adjust the vertical position */
+    left: 2px; /* Adjust the horizontal position */
+}
+
+.open-btn:hover {
+    color: #444;
+}
+
+.drawer-opened .open-btn {
+    display: none; /* Hide the menu icon when drawer is opened */
+}
+
+.drawer .profile {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.profile-pic {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+
+}
+
+.profile-info {
+    color: white;
+}
+
+.profile-info p {
+    margin: 1px 0;
+    text-align: left;
+    display: inline;
+    margin-left: -20px;
+}
+
+.profile-info .name {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.profile-info .email,
+.profile-info .role {
+    font-size: 10px;
+    margin-top: -30px;
+}
+
+.options {
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    font-size: 18px;
+    color: white;
+}
+
+.option i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.option i {
+    margin-right: 15px; /* Adjust as needed */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensure items are spaced out */
+    width: 100%;
+    background-color: #d1f0f7;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: margin-left 0.5s ease;
+    position: relative;
+    margin-top: -15px;
+}
+
+.not-btn {
+    font-size: 30px;
+    padding-right: 10px;
+    color: #004859;
+    margin-top: 15px;
+    position: relative;;
+
+}
+
+.profile-pic-nav {
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+    margin-top: 17px;
+    background-color: transparent;
+    position: relative;
+}
+
+.nav-right { /* Assuming you've kept the renamed class */
+    display: flex;
+    align-items: center; /* Align icons vertically */
+}
+
+.nav-right i,
+.nav-right img {
+    margin-left: 10px; /* Add some spacing between elements */
+}
+
+.prof-name {
+    color: #004859;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 2px;
+    font-weight: 550;
+    align-items: center;
+    display: flex;
+    margin-left: 10px;
+
+}
+
+.down {
+    color: #004859;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.dropdown .prof-name {
+    color: #004859;
+    font-size: 16px;
+    padding: 3px;
+    margin-bottom: 2px;
+    font-weight: 550;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+
+}
+
+.dropdown-content p {
+    color: #004859;
+    padding: 0px 5px;
+    margin: 0;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.dropdown-content p:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    left: -10px;
+
+    margin-top: 10px;
+}
+
+.dropdown:hover .prof-name {
+    background-color: #f1f1f1;
+}
+
+.p-off {
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+/* Table Styles */
+
+.tree-details {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    color: #004859;
+    font-size: 17px;
+    width: 100%;
+}
+.tree-details h1 {
+   
+    font-family: 'Cabin',sans-serif;
+}
+#treeTable {
+    table-layout: fixed;
+    width: 100%;
+    font-size: 12px;
+    border-collapse: collapse;
+}
+
+/* Provide a minimum width for each column */
+#treeTable th, #treeTable td {
+    min-width: 100px; /* Adjust the width as per your requirements */
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+#treeTable th {
+    background-color: #004859;
+    color: white;
+    font-size: 10px;
+}
+
+#treeTable tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#treeTable tbody tr:hover {
+    background-color: #ddd;
+}
+.header-image{
+    height: 50px;
+    width: 100%;
+    margin-top: -20px;
+    position: absolute;
+}
+
+
+/* Ensure the table wrapper maintains the table width */
+.tree-details {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: -5px;
+    margin-left: 10px;
+}
+
+/* Style for the dropdown and checkbox container */
+.filter {
+    display: none;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+    z-index: 1;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+
+.dropdown:focus .filter {
+    display: block;
+    
+
+}
+.dropbtn{
+    height: 30px;
+    margin-left: 3px;
+    margin-top: -5px;
+    margin-bottom: 5px;
+    background-color: transparent;
+    border-radius: 5px;
+    border-color: #004859;
+    outline:none;
+}
+/* Styles for the controls section */
+.controls {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for the list size dropdown */
+.controls label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.controls select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 20px;
+}
+
+/* Styles for the sort button */
+#sortButton {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #004859;
+    color: #fff;
+    cursor: pointer;
+}
+
+#sortButton:hover {
+    background-color: #004859;
+}
+
+/* Styles for pagination */
+#pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pagination button {
+    background-color: white; /* Changed background color to white */
+    border: 1px solid #004859; /* Added border */
+    color: #004859; /* Changed text color to blue */
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#pagination button.active {
+    background-color: #004859; /* Changed background color to blue */
+    color: white; /* Changed text color to white */
+}
+
+   

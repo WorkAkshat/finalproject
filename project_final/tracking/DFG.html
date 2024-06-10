@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Your Website</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cabin&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="c.css">
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+	</head>
+
+	<body>
+		<nav class="navbar">
+			<div class="navbar-left">
+				<i class="fa-solid fa-bars"></i>
+			</div>
+			<div class="navbar-right">
+				<input
+					type="text"
+					placeholder="Search..."
+					class="search-bar" />
+				<div class="notification-icon"></div>
+				<div class="user-profile">
+					<img
+						src="profile.jpg"
+						alt="Profile Photo"
+						class="profile-photo" />
+					<span class="username">John</span>
+					<div class="dropdown-menu">
+						<!-- Dropdown content here -->
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="left-panel">
+				
+				<div class="form-container">
+					<h1 class="request-title">Request</h1>
+					<h2 class="create-request">Create a Request</h2>
+					<form action="#" method="POST">
+						<div class="form-group">
+							<input
+								type="text"
+								id="surveyor-name"
+								name="surveyor-name"
+								class="input-field"
+								placeholder="Surveyor's Name" />
+						</div>
+						<div class="form-group">
+							<input
+								type="text"
+								id="tree-id"
+								name="tree-id"
+								class="input-field"
+								placeholder="Tree ID" />
+						</div>
+						<div class="form-group">
+							<select
+								id="request-type"
+								name="request-type"
+								class="input-field">
+								<option
+									value=""
+									disabled
+									selected
+									hidden>
+									Type of Request
+								</option>
+								<option value="option1">
+									Cutting
+								</option>
+								<option value="option2">
+									Pruning
+								</option>
+								<!-- <option value="option3">
+									Option 3
+								</option> -->
+							</select>
+						</div>
+						<div class="form-group">
+							<textarea
+								id="reason"
+								name="reason"
+								class="input-field"
+								placeholder="Reason" fon></textarea>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="submit-button">
+								Submit
+							</button>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+			<div class="vertical-line"></div>
+			<div class="right-panel">
+				<div class="tracking-section">
+					<h2 class="tracking">Tracking</h2>
+					<input
+						type="text"
+						placeholder="Search..."
+						class="tracking-search" />
+					<div class="vertical-line2">
+						<div class="barcontainer">
+							<div>
+								<div class="iconDiv"></div>
+								<p class="taskText">Request Created</p>
+							</div>
+							<div>
+								<div class="iconDiv"></div>
+								<p class="taskText">Awaiting Response</p>
+							</div>
+							<div>
+								<div class="iconDiv"></div>
+								<p class="taskText">Payment Due</p>
+							</div>
+							<div>
+								<div class="iconDiv"></div>
+								<p class="taskText">Request Approved</p>
+							</div>
+							<div class="bar" style="height: 35%"></div>
+						</div>
+					</div>
+					<div class="tracking-info">
+						<!-- Tracking details will be displayed here -->
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

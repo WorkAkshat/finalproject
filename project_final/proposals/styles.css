@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Cabin:ital,wght@0,400..700;1,400..700&family=Candal&family=Luckiest+Guy&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background: linear-gradient(to bottom, #ffffff, #004859);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.drawer {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #004859;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;
+    transition: opacity 2s; /*check it*/
+}
+
+
+.drawer h2, .drawer p {
+    padding: 8px 32px;
+    text-align: center;
+}
+
+.drawer .close-btn {
+    position: absolute;
+    top:1px;
+    right: 5px;
+    font-size: 36px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.drawer-image {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    margin: auto;
+    margin-top: -50px;
+    display: block;
+}
+
+.main-content {
+    margin-left: 45px;
+    align-items: flex-start; 
+    width: 100%;
+    margin-bottom: 50px;/* Align items to the start */
+}
+
+.open-btn {
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #004859;
+    padding: 10px 20px;
+    text-align: center;
+    transition: 0.3s;
+    position: fixed;
+    z-index: 2; /* Ensure the button is above the drawer */
+    top: 4px; /* Adjust the vertical position */
+    left: 2px; /* Adjust the horizontal position */
+}
+
+.open-btn:hover {
+    color: #444;
+}
+
+.drawer-opened .open-btn {
+    display: none; /* Hide the menu icon when drawer is opened */
+}
+
+.drawer .profile {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.profile-pic {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.profile-info {
+    color: white;
+}
+
+.profile-info p {
+    margin: 1px 0;
+    text-align: left;
+    display: inline;
+    margin-left: -20px;
+}
+
+.profile-info .name {
+    font-weight: bold;
+    font-size: 14px;
+
+}
+
+.profile-info .email,
+.profile-info .role {
+    font-size: 10px;
+    margin-top: -30px;
+    
+}
+.options {
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    font-size: 18px;
+    color: white;
+}
+
+.option i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.option i {
+    margin-right: 15px; /* Adjust as needed */
+}
+.not-btn{
+    font-size: 30px;
+    padding-left: 15px;
+    color: #004859;
+    margin: 0px;
+    margin-top: 17px;
+}
+.search-bar {
+    padding: 5px;
+    font-size: 18px;
+    border: 1px solid #004859;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s;
+    flex: 1; /* Make search bar take the remaining space */
+    max-width: 75%; /* Set a max width if needed */
+    margin-left: 7%;
+    margin-top: 17px;
+}
+
+
+.search-bar:focus {
+    border-color: #004859;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    width:100%; /* Subtract button width from total width */
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: margin-left 0.5s ease;
+    position: relative;
+    margin-top: -15px;
+    margin-left: 10px
+}
+    .navbar.fixed {
+        
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+.navbar.drawer-opened {
+    margin-left: 250px; /* Adjust this value based on your drawer width */
+}
+
+.profile-pic-nav{
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+    margin-top: 17px;
+    
+}
+.prof-name{
+    color: #004859;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 2px;
+    font-weight: 550;
+    align-items: center;
+    display: flex;
+    margin-left: 10px;
+}
+.down{
+    color: #004859;
+
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .prof-name {
+    color: #004859;
+    font-size: 16px;
+    padding: 3px;
+    margin-bottom: 2px;
+    font-weight: 550;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content p {
+    color: #004859;
+    padding: 0px 5px;
+    margin: 0;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+}
+
+.dropdown-content p:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .prof-name {
+    background-color: #f1f1f1;
+}
+.p-off{
+    font-size: 16px;
+    padding-left: 5px;
+}
+.subheading{
+    color: #004859;
+    font-size: 60px;
+    font-family: 'Cabin',sans-serif;
+    margin: 0;
+    margin-left: 60px;
+}
+.proposal-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.proposal-box {
+    border: 1px solid #ccc;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.accept-btn, .decline-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 130px;
+}
+
+.accept-btn {
+    background-color: #004859;
+    color: white;
+}
+
+.decline-btn {
+    background-color: #004859;
+    color: white;
+}
+/* Existing CSS */
+
+.proposal-wrapper {
+    overflow-x: auto;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.proposal-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: flex-start; /* Start from left */
+    align-items: center;
+}
+
+.proposal-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.proposal-box p {
+    margin-bottom: 10px; /* Adjust the margin bottom to reduce vertical spacing */
+}
+
+#drawer {
+    z-index: 1000; /* or any value higher than other elements */
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.buttons button {
+    margin-right: 10px; /* Add margin between the buttons */
+}
+
+.accept-btn, .decline-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 130px;
+}
+
+.accept-btn {
+    background-color: #004859;
+    color: white;
+}
+
+.decline-btn {
+    background-color: #004859;
+    color: white;
+}
+
+.proposal-wrapper {
+    display: flex;
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    margin-left: 50px;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* For Firefox */
+}
+
+.proposal-box {
+    flex: 0 0 auto; 
+    margin-right: 50px; 
+    
+}
+.proposal-wrapper::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+th {
+    background-color: #f2f2f2;
+}
+/* Add scroll page */
+body {
+    overflow-y: auto;
+}
+
+/* Ensure table is scrollable */
+table#proposalTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table#proposalTable thead {
+    background-color: #f4f4f4;
+}
+
+table#proposalTable th,
+table#proposalTable td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table#proposalTable tbody {
+    display: block;
+    max-height: 300px; /* Adjust height as needed */
+    overflow-y: auto;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    color: white;
+}
+
+table#proposalTable thead,
+table#proposalTable tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    
+}
+
+/* Ensure proposal-wrapper is scrollable */
+.proposal-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin-left: 50px;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* For Firefox */
+    background-color: transparent !important; /* Set background color to transparent */
+}
+
+.proposal-box {
+    flex: 0 0 auto;
+    margin-right: 50px;
+    background-color: #f2f2f2;/* Set background color for the boxes */
+}
+
+.proposal-box {
+    flex: 0 0 auto; 
+    margin-right: 50px; 
+}
+
+
+
+@media (max-width: 768px) {
+    
+    .proposal-container {
+        flex-direction: column;
+    }
+}
